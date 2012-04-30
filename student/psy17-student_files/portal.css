@@ -1,0 +1,1303 @@
+  /*general body - used by main portal document */ 
+body{
+	width: 100%;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:.8em;
+	margin: 0;
+background-color: #f6f4f4;
+}
+
+/*PART 1 - MAIN LAYOUT BLOCKS*/
+/*outer wrapper for portal content (decorative - child is #portalContainer )*/
+#portalOuterContainer{
+background-color: #fff;
+
+}
+
+/*inner wrapper for portal content (decorative - children are #header #container and #footer )*/
+#portalContainer{
+}
+
+/*wrapper masthead  and site navigation 
+ two possible states - logged in headerMax, not logged in - headerMin*/
+#headerMax,#headerMin{
+	width: 100%;
+	margin: 1em auto 0 auto;
+	height:100%;
+	overflow:hidden;
+}
+#headerMin{
+	border-bottom:2px solid #09C
+}
+
+/*accessibility links wrapper */
+#skipNav{
+}
+
+/*site hierarchy breadcrumb*/
+#siteHierarchy{
+        clear:both;
+        float:none;
+        margin:0;
+        list-style: none;
+        padding:.5em 0;
+}
+/*style the standard breadcrumbseparator
+can set display:none if needed because the list-style is taking care of it*/
+.breadSeparator{
+}
+#siteHierarchy li{
+        display:inline;
+}
+#siteHierarchy li a, #siteHierarchy li a:visited{
+        color:#09c;
+}
+
+/*wrapper for site content (includes as children #toolMenuWrap,#content and #footer)*/
+#container{
+	clear: both;
+	margin: 0 auto;
+}
+
+/*wrapper for #toolMenu - children are #worsiteLogo,#toolMenu*/
+#toolMenuWrap{
+	float: left;
+	width: 9.6em;
+	color: #300f00;
+	text-align: right;
+	padding:  0 .5em 0 0;
+	font-size: .9em;
+	/*border-right:2px solid #fff; */
+ margin-top: 15px;
+}
+
+#toolMenuWrap:hover{
+/*	border-right:2px solid #09c; */
+}
+/*depending on site type - different hover effects for the tool menu parent block
+site types are a local setting - adjust */
+.workspace #toolMenuWrap:hover{
+/*	border-right:2px solid #aaa; */
+}
+.course #toolMenuWrap:hover{
+/*	border-right:2px solid #FC6; */
+}
+.project #toolMenuWrap:hover{
+/*	border-right:2px solid #9CF; */
+}
+
+.toolSubMenuHolderRS {
+	background: url(images/toolSubMenuHolder_tl.png) no-repeat top left;
+	width: 12.5em;
+	position: relative;
+	top: 4px;
+	margin-left: .7em;
+
+}
+.toolSubMenuHolderRS_top {
+	background: url(images/toolSubMenuHolder_tr.png) no-repeat top right;
+}
+.toolSubMenuHolderRS_bottom {
+	background: url(images/toolSubMenuHolder_bl.png) no-repeat bottom left;
+	padding-top: 4px;
+}
+.toolSubMenuHolderRS_bottom div {
+	background: url(images/toolSubMenuHolder_br.png) no-repeat bottom right;
+}
+.toolSubMenuHolderRS_content {
+	background: url(images/toolSubMenuHolder_r.png) top right repeat-y;
+}
+
+.toolSubMenuHolderRS_top div,.toolSubMenuHolderRS_top,
+.toolSubMenuHolderRS_bottom div, .toolSubMenuHolderRS_bottom {
+	width: 100%;
+	height: 8px;
+	font-size: 1px;
+margin-bottom: 6px;
+}
+.toolSubMenuHolderRS_content, .toolSubMenuHolderRS_bottom {
+	margin-top: -5px;
+}
+.toolSubMenuHolderRS_content { padding: 0 0px; }
+
+.toolSubMenuHeadingRS {
+	 padding-left: 10px; 
+ 
+color: #300f00;
+	text-transform: uppercase;
+border-bottom: 1px #ccc dotted;
+padding-bottom: 3px;
+margin-bottom: 3px;
+}
+.toolSubMenuRSSpacer {
+	/* Uncomment the following if curvyCorners are not used */
+	  display: none;  
+	line-height: 6px;
+	 line-height: 4px;
+}
+.toolSubMenuRS {
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc; 
+
+}
+
+/*wrapper for site content (portlets) -  children can be #col1 or #col1of2 and #col2of2 depending in the number of columns*/
+#content{
+	padding: 0;
+	margin-top: .5em;
+	/*margin-left: 12.9em;*/
+margin-left: 180px;
+}
+/*margin tweak for IE to avoid float drop*/
+* html #content{margin-left:11.3em}
+/*wrapper for footer blocks*/
+#footer{
+	color: #dacdac;
+  
+	font-size: 11px;	 
+	padding: 0;
+	width: auto;
+	clear: both;
+	top: 0;
+	/*border-top: 1px solid #CCCCCC;*/
+	text-align: center;
+background-color: #300f00;
+overflow: auto;
+padding-bottom: 5px;
+line-height: 15px;
+}
+
+#footer a{
+	color: #dacdac;
+}
+
+#footer a:hover{
+	color: #fff;
+}
+
+
+#ifrm {
+	height: 605px;
+	*/height: 647px;
+	margin-bottom: -3px;
+	*/margin-bottom: 0px;
+}
+
+/*PART 2 - HEADER IFRAME SETTINGS*/	
+/*iframe sizes for different states*/
+/*gone for 2.3
+.sitenav-log{
+	user not logged in
+	height: 90px;
+	width: 100%;
+	border-bottom:1px solid #09c
+}
+
+.sitenav-max{
+	user logged in 
+	height: 7.8em;
+	max-height:140px;
+	min-height:100px;
+	width: 100%;
+}
+
+* html .sitenav-max{
+	user logged in - iframe height tweak for IE
+	height: 8em;
+	}
+.sitenav-min{
+	no logos or banners
+	height: 2em;
+	width: 100%;
+}*/
+
+/*PART 3 - HEADER BLOCKS (BRANDING,LOGIN)*/
+/*depending on site type - different border-bottoms for the site menu parent block
+site types are a local setting - adjust */
+.workspace .siteNavWrap{
+/*	border-bottom:3px solid #aaa; */
+background-color: #fff;
+}
+.course .siteNavWrap{
+/*	border-bottom:3px solid #fc6; */
+background-color: #fff;
+}
+.project .siteNavWrap{
+/*	border-bottom:3px solid #9cf; */
+background-color: #fff;
+}
+#siteNavWrapper{
+	margin: 0;
+background-color: #fff;
+
+
+ 
+}
+
+#siteTabsHolder {
+	/*background-color: #AFBC22;*/
+/*background-color: #E3DFBB;*/
+
+border-bottom:1px solid #300f00;
+}
+
+#roleView {
+	background-color: #FFFFFF;
+	padding-left: 10px;
+	padding-right: 3px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-size: 0.9em;
+	clear: both;
+	float: right;
+}
+
+#roleSwitch{	
+	*/padding-left: 10px;
+	*/padding-right: 3px;
+	*/padding-top: 2px;
+	*/padding-bottom: 2px;
+	*/clear: both;
+	*/float: right;
+}
+
+/*wrapper for mast head elements - children are 3 blocks - #mastLogo,#mastBanner,#mastLogin*/
+#mastHead{
+	clear: both;
+ 
+}
+
+/*container wrapping branding images - portal outputs one /library/skin/<skin name>/images/logo_inst.gif
+that can be used or hidden,can also use a background:url(images/<image name>.<ext>) in this block,or both superimposing them*/
+#mastLogo{
+	float: left;
+	margin-left: 1em;
+	width: auto;
+ 
+}
+
+/*the portal outputs an image that can be treated here or hidden with display:none*/
+#mastLogo img{
+	/*margin: 1em .5em;*/
+margin-top: 8px;
+	border: 0;
+ 
+}
+
+/*another container wrapping branding images - portal outputs one /library/skin/<skin name>/images/banner_inst.gif
+that can be used or hidden,can also use a background:url(images/<image name>.<ext>) in this block,or both superimposing them*/
+#mastBanner{
+	width: auto;
+	vertical-align: top;
+	float: left;
+ 
+}
+
+/*the portal outputs an image that can be treated here or hidden with display:none*/
+#mastBanner img{
+	margin: 1em .5em;
+}
+
+/*container wrapping,depending on Sakai settings:1) a login form,2) a login link for CAS,3) a logout link*/
+#mastLogin{
+	float: right;
+	text-align: right;
+	padding-right: 2em;
+	vertical-align: top;
+color: #666;
+ 
+}
+
+/*the anchor for the login link for CAS above can be an image - treated here*/
+#mastLogin img{
+	margin-top: 0;
+	border: 0;
+}
+
+/*login links for CAS,logout link*/
+#mastLogin a,#mastLogin a:visited{
+	/*color: White;*/
+	margin-top: 0;
+color: #666;
+}
+
+#mastLogin a:hover{
+	color: Black;
+}
+
+/*login form elements - in order,form,userid field,password field,login button - first 2 have labels associated with them,gettable as #loginForm label{
+}
+
+#loginForm is the form for login - contains children #eid #pw #submit*/
+#loginForm{
+	margin: 1em 0;
+}
+
+#eid, #pw {
+	color: #333333;
+	width: 60%;
+	border: 1px solid #AAAAAA;
+	padding: 3px;
+	margin: 0 0 0 0;
+}
+
+#loginForm label{
+	color: #000;
+	padding: 0 .5em
+}
+
+#submit{
+	padding: 2px 20px 2px 20px;
+	background-color: #33AEE3;
+	color: White;
+	border: 1px outset;
+	cursor: hand;
+}
+
+#submit:hover{
+}
+
+/*block for login/logout links */
+#loginLinks{
+	margin: 1em 0 2em 0;
+ 
+}
+
+/*main CAS link*/
+#loginLink1{
+}
+
+/*secondary CAS link*/
+#loginLink2{
+}
+
+/*PART 4 - SITE NAVIGATION - children of #siteNavBlock*/
+/*outer wrapper for the site navigation blocks - it is a class,not an id because it can be overloaded with other values having to do with site type
+so for example <div class="tabHolder workspace"> so that different site types can be treated differently via inheritance - children are #siteNavWrap and #navBottom*/
+
+.siteNavWrap {
+	position: relative;
+	width: 100%;
+/*	background: #AFBC22;*/
+ /*background: #E3DFBB;*/
+ 
+
+	clear: both;
+	font-size: 100%;
+	line-height: 1.75em;
+	height: 32px;
+}
+
+/*wrapper for the site links and site <select> blocks - children are #siteNav and #tabNav */
+#siteNav{
+/*	width: 100%; */
+ 
+}
+
+/*wrapper for the quick links*/
+#quickLinks {
+	float: left;
+	margin: 0 0 0px 1.5em;
+	padding: .75em 0 0 0;
+	/*color: #D7DE9A;*/
+	z-index: 9999;
+ color: #300F00;
+}
+
+#quickLinks li {
+	display: block;
+	float: left;
+	margin: 0 3px 0 3px;
+	padding: 0;
+}
+
+#quickLinks li.label {
+	/*color: #5C7700;*/
+ color: #300F00;
+}
+
+#quickLinks li a, #quickLinks li a:link, #quickLinks li a:visited {
+	/*color: #5E7900;*/
+	font-weight: bold;
+	padding: 10px 6px 6px 6px; 
+ color: #300F00;
+}
+
+#quickLinks li a:hover {
+	/*color: #F4F3C5;*/
+color: #300F00;
+	background: transparent;
+	padding: 10px 6px 6px 6px; 
+	/*text-decoration: none;*/
+text-decoration:underline;
+}
+
+#quickLinks li.selectedTab a {
+	/*color: #F4F3C5;*/
+color: #c44c0f;
+	background: transparent;
+	padding: 10px 6px 6px 6px; 
+	text-decoration: none;
+	/*cursor: default;*/
+
+}
+
+#editQuickLinks{
+	padding-top: 1px;
+}
+/*wrapper for the site link list   - the #siteLinkList child)*/
+#linkNav{
+	border-bottom: 0px solid #000000;
+}
+
+/*wrapper for the site <select> that is displayed when more than x sites are in the link list*/
+#selectNav{
+	padding: 0;
+	margin: .0em 0em 0em 4em;
+/*	background-color: #F7F7F4; */
+
+}
+
+/*the <select> contextually defined*/
+#selectNav select{
+	display: inline;
+	font-size: .9em;
+	margin: 7px 0 0 ;
+	padding: 0;
+	border: 2px solid #0077B5;
+}
+
+#selectNav select option{
+	background: #fff;
+}
+
+/*a ul - the li below are outer wrappers for the links to sites */
+#siteLinkList{
+	white-space: nowrap;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	margin: 0;	
+	padding: 4px 0px 0 0;
+	float: right;
+	height: auto;
+	font-weight: bold;
+
+}
+
+/*list elements - children are <span> and <a>*/
+#siteLinkList li {
+/*	position: relative;
+	top: 7px;
+	background: transparent url(images/ -left.gif) no-repeat scroll left top; */
+	white-space: nowrap;
+	/*background: #5E7A00;*/
+background: #f5f2ea;
+	display: block;
+	float: left;
+	margin: 0 3px 0 0;
+	padding: 2px 6px 1px 6px; /*padding: 2px 6px 2px 6px;*/
+border-top: 1px #7e6d5f solid;
+border-right: 1px #7e6d5f solid;
+border-left: 1px #7e6d5f solid;
+
+}
+
+/*span shim for fine grained manipulation of link display (decorative)*/
+#siteLinkList li span{
+
+}
+
+/*links to other sites*/
+#siteLinkList li a, #siteLinkList li a:link, #siteLinkList li a:visited {
+/*	background: transparent url(images/tab-right.gif) no-repeat right top; */
+	/*background: #5E7A00;*/
+ 
+	/*color: #EAEFA7;*/
+color: #46460f;
+background: #f5f2ea;
+	display: block;
+	float: left;
+	margin: 0pt;
+	padding: 5px 5px 3px 5px;
+	text-decoration: none;
+
+}
+
+#siteLinkList li a:hover {
+	text-decoration: none;
+
+}
+
+/*the current sites' link - consists of the li and a*/
+#siteLinkList li.selectedTab {
+/*	background:transparent url(images/tab-left-selected.gif) no-repeat scroll left top; */
+	/* background: White url(images/tabHighlight.gif) no-repeat center; */
+background: #f5f2ea;
+	border-width: 0;
+	position: relative;
+	top: 0;
+border-top: 1px #7e6d5f solid;
+border-right: 1px #7e6d5f solid;
+border-left: 1px #7e6d5f solid;
+
+}
+
+#siteLinkList li.selectedTab a,
+	#siteLinkList li.selectedTab a:link,
+	#siteLinkList li.selectedTab a:visited,
+	#siteLinkList li.selectedTab a:hover {
+/*	background:transparent url(images/tab-right-selected.gif) no-repeat scroll right top; */
+	background: transparent;
+	/*color:#1B96C9;*/
+color: #db6400;
+	font-weight: bold;
+	text-decoration: none;
+
+}
+
+#siteLinkList li.tab-dim {
+/*	background: transparent url(images/tab-left-selected.gif) no-repeat scroll left top; 
+	background: White;*/
+}
+
+#siteLinkList li.tab-dim a,
+	#siteLinkList li.tab-dim a:link,
+	#siteLinkList li.tab-dim a:visited,
+	#siteLinkList li.tab-dim a:hover {
+/*	color: #666;
+	background:transparent url(images/tab-right-selected.gif) no-repeat scroll right top; 
+	background: White;
+	padding-bottom: 3px; */
+}
+
+#siteLinkList li.more-active {
+/*	background: transparent url(images/tab-left-selected.gif) no-repeat scroll left top; */
+	background: White;
+}
+
+#siteLinkList li.more-active a,
+	#siteLinkList li.more-active a:link,
+	#siteLinkList li.more-active a:visited {
+/*	background:transparent url(images/tab-right-selected.gif) no-repeat scroll right top; */
+	background: White;
+	/*color: #1B96C9;*/
+color: #300f00;
+	text-decoration: none;
+	padding-bottom: 5px;
+}
+
+
+#siteLinkList li.more-tab a:hover {
+	text-decoration: none;
+}
+
+#siteLinkList li.more-tab span.outer {
+	background-image:  url(images/tab-arrow-down.gif);
+	background-repeat: no-repeat;
+	background-position: 100% 36%;
+	padding-right: 20px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#siteLinkList li.more-active span.outer {
+	background-image: url(images/tab-arrow-up.gif);
+	background-repeat: no-repeat;
+	background-position: 100% 36%;
+	padding-right: 20px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#siteLinkList li.more-tab a:hover span.outer {
+	text-decoration: none;
+}
+
+#siteLinkList li.more-tab a:hover span.inner {
+	text-decoration: none;
+}
+
+.fixTabsIE{
+	visibility: hidden;
+	display: none;
+	border-width: 0;
+}
+
+/*wrapper for the site <select> that is displayed when more than x sites are in the link list*/
+.dhtml_more_tabs {
+	line-height: 1.2em;
+	background-color: #FAFAFA;
+	border: 2px solid #E5E5E5;
+/*	border-top-width: 0; */
+	margin-left: 4em;
+	clear: left;
+}
+
+.dhtml_more_tabs div.termContainer {
+	float: left;
+	padding: 0.8em;
+	text-align: left;
+}
+
+.dhtml_more_tabs div.courseContainer {
+	clear: left;
+	padding: 0.8em;
+	text-align: left;
+}
+	
+.dhtml_more_tabs h4 {
+	font-size: .9em;
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+	color: #72634E;
+}
+
+.dhtml_more_tabs ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;	
+}
+
+.dhtml_more_tabs  li {
+	margin-bottom: 0.4em; 
+	line-height: 1.1em;
+}
+
+.dhtml_more_tabs div:first-child {
+	border-left: none;
+}
+
+.dhtml_more_tabs a:link, .dhtml_more_tabs a:visited, .dhtml_more_tabs a:active{
+	color: #555;
+	text-decoration: underline;
+	font-size: .9em;
+}
+
+.dhtml_more_tabs a:hover {
+	color: #000;
+}
+
+#more_tabs_instr {
+	color: #999;
+	font-size: .9em;
+	margin: 0.4em 0.8em 0.8em;
+	padding-top: 0.4em;
+	clear: both;
+	border-top: 1px solid #CCC;
+	text-align: right;
+	line-height: 1.1em;
+}
+
+#portalMask {
+	background-color: #F6F6F6;
+	position: absolute;
+	z-index: 9000;
+	top: 0;
+	left:0;
+	filter:alpha(opacity=0);
+	opacity: 0;
+	-moz-opacity: 0;
+}
+
+/*block in case need to display any decorative element above or below the .tabHolder block*/
+#navBottom{
+	display: none;
+}
+
+/*PART 5 - SITE TOOL LINKS  - children of #toolMenuWrap	*/
+/*wrapper for ul that lists the links to tools*/
+#toolMenu{
+	width: 10.6em;
+	padding: 0;
+	margin: 0 0 0 0;
+	color: #999;
+	 background: inherit; 
+
+}
+
+#toolMenu ul{
+	width:auto;
+	list-style: none;
+	margin: 0;
+	padding-right: 0;
+	padding-left: 0;
+}
+
+#toolMenu li{
+	margin-left: 0;
+	width: auto;
+	padding: 0 0 .1em 0;
+	text-align: left;
+}
+
+/*span shim for fine grained manipulation of link display (decorative)
+also hide if are going to be using icon links (as background of <a> and <li>
+*/
+
+#toolMenu li.selectedTool span{
+	display: block;
+	 font-weight: bold; 
+	padding-left : 1em;
+   margin-bottom : 0px;
+    margin-left : 0px;
+    margin-right : 0px;
+    margin-top : 0px;
+padding-top:3px;
+padding-bottom: 3px;
+ font-size: 13px;
+color:#c44c0f;
+}
+#toolMenu li span{
+
+/*comment this line for a return to sanity
+display:none*/
+}
+
+#toolMenu li a:link,#toolMenu li a {
+	display: block;
+	text-decoration: none;
+ font-size: 13px;
+	 
+	/*color: #1B96C9;*/
+color: #333;
+    padding-left : 1em !important;
+    padding-right : 0px;
+    margin-bottom : 0px;
+    margin-left : 0px;
+    margin-right : 0px;
+    margin-top : 0px;
+padding-top:3px;
+padding-bottom: 3px;
+ 
+    background-position : center left !important;
+    background-repeat : no-repeat !important;
+ 
+}
+#toolMenu li a:hover{
+	text-decoration: underline;
+	/*color: #555;*/
+  
+}
+
+#toolMenu li a.selected{
+	text-decoration: none;
+	color: #c44c0f;
+	cursor: text;
+}
+
+#toolMenu li a.selected:hover{
+	text-decoration: none;
+	color: #c44c0f;
+	cursor: text;
+}
+
+/** Portal Timeout **/
+#timeout_alert_body {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 4px solid #417DC1;
+    color: #000000;
+    height: 250px;
+    left: 50%;
+    margin-left: -250px;
+    padding: 5px 5px 5px 10px;
+    position: absolute;
+    top: 20%;
+    width: 500px;
+}
+#trunk_timeout_img {
+    float: left;
+    width: 180px;
+    height: 250px;
+}
+#trunk_timeout_text {
+    float: right;
+    width: 300px;
+    padding-top: 20px;
+    padding-right: 20px;
+}
+ 
+#timeout_alert_body p {
+    text-align: left;
+}
+
+/*PART 6 - SITE AFFILIATION,SITE TYPE/STATUS AND PRESENCE - children of #toolMenuWrap	*/
+/*site logo wrapper*/
+#worksiteLogo{
+	/*width: 9.7em;*/
+	height: auto;
+	overflow: hidden;
+	display: block;
+width: 170px;
+}
+
+/*site logo image - Sakai may output,depending on installation,an image here based in site affiliation. Site owner may also point to a url - overriding the Sakai provided image*/
+#worksiteLogo img{
+	display: block;
+	margin: .5em auto;
+}
+
+/*wrapper for the string that Sakai will output based on site type (ie. project,course) this is open ended and institution specific*/
+#siteType{
+	display: none;
+}
+
+/*wrapper for the string that Sakai will output based on site status when status is "Unpublished"*/
+#siteStatus{
+	text-transform: capitalize;
+	text-align: left;
+	background: url(images/warn.gif) .2em center no-repeat #fff;
+	border: 1px solid  #aaa;
+	clear: both;
+	color: #aaa;	
+	font-size: 	small;
+	margin: 5px 2px 15px 2px;
+	padding: 3px 3px 3px 2em;
+}
+
+/*wrapper for all elements of presence display */
+.presenceWrapper{
+	width: 100%;
+	margin-top: .5em;
+}
+
+/*wrapper for title of iframe ("Users present")*/
+#presenceTitle{
+	font-size: .8em;
+	text-align: right;
+	margin-right: .5em;
+
+	color: #999999;
+	text-transform: lowercase;
+}
+
+/*of presence iframe*/
+#presenceIframe{
+	height: 100px;
+	margin: .8em;
+	width: 11.6em;
+	 border: 1px solid #CECECE; }
+
+#siteTitle {
+	/*color: #72634E;*/
+color: #421d11;
+	/*font: bold 1.8em Arial, Helvetica, sans-serif;*/
+font: bold 1.6em Arial, Helvetica, sans-serif;	
+
+/*padding: 1.2em 0px 10px 7.3em;*/
+ padding: 1.2em 0px 10px 180px; 
+}
+/*
+#supplementaryNavGraphic {
+	width: 180px;
+	height: 167px;
+	background: url(images/highlighterCLE.jpg) no-repeat top;
+	clear: left;
+}*/
+
+/*PART 7 - PORTLETS - children of #content*/
+/*a page may display portlets in one column or two columns - the next three id selectors address the three possiblities - sole child of column is the .portlet */
+#col1{
+	padding-right: .0em;
+}
+
+#col1of2{
+	width: 49%;
+	*/width: 48%;
+	float: left;
+	margin: 0;
+	margin-left: 0.3em;
+}
+
+#col2of2{
+	width: 49%;
+	*/width: 48%;
+	float: right;
+}
+
+/*wrapper class for portlets - decorative -  contains two wrapper block children:.portletTitleWrap and  .portletMainWrap*/
+.portlet{
+/*	margin-top: 0px; */
+
+}
+
+/*.portletTitleWrap are wrappers for the tool title documents,
+below they are contextually defined depending on the column as an example,as you may want to adjust the widths accordingly*/ 
+#col1 .portletTitleWrap{
+	width: 97.5%;
+	*/width: 96.0%;
+}
+
+#col1 .portletMainWrap{
+	width: 97.5%;
+	*/width: 96.0%;
+ 
+}
+
+#col1of2 .portletTitleWrap,#col2of2 .portletTitleWrap{
+	width: 98.5%;
+	*/width: 96.0%;
+}
+
+#col1of2 .portletMainWrap,#col2of2 .portletMainWrap{
+	width: 98.5%;
+	margin-bottom: .5em;
+	*/width: 96.0%;
+}
+
+.portletTitle{
+	width: 100%;
+	height:100%;
+	overflow:hidden;
+}
+
+.portletTitle .title img{
+	margin: 0;
+	vertical-align: text-bottom;
+	width: 18px;
+	border:none;
+	height: 16px;
+}
+
+.portletTitle .title{
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 2px 4px 6px 0;
+	height: 1em;
+	float: left;
+	color: #333;
+}
+
+.portletTitle .title h2{
+	display: inline;
+	margin: 0 0 0 .2em;
+	padding: 0;
+	/*color: #72634E;*/
+color: #333;
+	/*font-weight: normal;*/
+	/*font-size: 1.4em;*/
+font-size:1.2em;
+font-weight: bold;
+}
+
+.portletTitle .title a{
+	background: url(images/reload.gif) center left no-repeat;
+	text-decoration: none !important;
+}
+
+.portletTitle .title a:hover{
+	background: url(images/reload_h.gif) center left no-repeat;
+}
+
+.portletTitle .action{
+	padding: 2px 4px 6px 2px;
+	vertical-align: middle;
+}
+
+.portletTitle .action img{
+	margin: 4px 0 0 6px;
+	border:none;
+	vertical-align: text-bottom;
+	width: 16px !important;
+}
+
+.portletTitle .action a{
+	background: url(images/help.gif) center right no-repeat;
+	text-decoration: none !important;
+}
+
+.portletTitle .action a:hover{
+	background: url(images/help_h.gif) center right no-repeat;
+}
+
+.portletTitle .action a#jsr-edit{
+        padding:2px;
+        background: url(images/page_edit.gif) center right no-repeat;
+}
+        
+.portletTitle .action a#jsr-edit:hover{
+        background: url(images/page_edit.gif) center right no-repeat;
+}       
+
+/*iframes for portlet title and portlet content*/
+/*gone for 2.3
+.portletTitleIframe{
+	margin: 0;
+	height: 1.8em;
+	width: 100%;
+ 
+}
+*/
+.portletMainIframe{
+	text-align: left;
+	margin-bottom: .5em;
+	height: auto;
+	border: none;
+ border: 1px #ccc solid; 
+}
+
+/*PART 8 - FOOTER BLOCKS - descendants of #footer TODO - unpack the 3 descendants and make them all children*/
+/*wrapper for links going to external sites - links are output as a series  separated via pipes (TODO:make a list already)*/
+.footerExtNav{
+	padding-top: .5em;
+	padding-bottom: .5em;
+}
+
+/*the links displayed inside the wrapper above*/
+.footerExtNav a,.footerExtNav A:link,.footerExtNav A:visited{
+	color: #dacdac;
+	text-decoration: none;
+	margin: 1em;
+}
+
+.footerExtNav a:hover{
+	color: #aaa;
+	text-decoration: underline;
+	margin: 1em;
+}
+
+/*a second wrapper - server info,build,etc*/
+#footerInfo{
+	font-size: 11px;
+	text-align: right;
+	clear: both;
+	padding-bottom: 1em;
+	padding-right: 20px;
+
+}
+
+#footerInfo img{
+	margin-top: .5em;
+	margin-bottom: .5em;
+}
+
+/*a third wrapper - reserved for copyright blurbs*/
+.sakaiCopyrightInfo{
+	color: #dacdac;
+ 
+	font-size: 11px;
+padding-top: 3px;
+}
+.sakaiCopyrightInfo a:link, .sakaiCopyrightInfo a:visited  {
+	font-size: 11px;
+	color: #dacdac;
+	font-weight: normal;
+}
+.sakaiCopyrightInfo a:hover {
+	color: #fff;
+}
+
+/*PART 8 - CONVENIENCE*/
+/*used to hide various blocks from sighted users that are in the source to help with accessibility*/
+.skip{
+	display: inline;
+	position: absolute;
+	top: -999px;
+	left: -999px;
+	height: 0;
+
+}
+
+/* PART 9 - Tool Icons */
+
+.icon-sakai-profile {
+/*	background-image : url(../../image/silk/vcard_edit.png); */
+}
+
+.icon-sakai-search {
+/*	background-image : url(../../image/silk/find.png); */
+}
+
+.icon-sakai-dropbox {
+/*	background-image : url(../../image/silk/folder_page.png); */
+}
+
+.icon-sakai-discussion {
+/*	background-image : url(../../image/silk/comments.png); */
+}
+
+.icon-sakai-presentation {
+/*	background-image : url(../../image/silk/monitor.png); */
+}
+
+.icon-sakai-sitestats {
+/*	background-image : url(../../image/silk/chart_bar.png); */
+}
+
+.icon-sakai-news {
+/*	background-image : url(../../image/silk/rss.png); */
+}
+
+.icon-sakai-mailbox {
+/*	background-image : url(../../image/silk/email.png); */
+}
+
+.icon-sakai-iframe-site {
+/*	background-image : url(../../image/silk/house.png); */
+}
+
+.icon-sakai-iframe {
+/*	background-image : url(../../image/silk/page_world.png); */
+}
+	
+.icon-sakai-rwiki {
+/*	background-image : url(../../image/silk/page_white_edit.png); */
+}
+
+.icon-sakai-siteinfo {
+/*	background-image : url(../../image/silk/wrench.png); */
+}
+
+.icon-sakai-announcements {
+/*	background-image : url(../../image/silk/flag_blue.png); */
+}
+
+.icon-sakai-assignment-grades {
+/*	background-image : url(../../image/silk/hourglass.png); */
+}
+
+.icon-sakai-site-roster {
+/*	background-image : url(../../image/silk/vcard.png); */
+}
+
+.icon-sakai-schedule {
+/*	background-image : url(../../image/silk/calendar.png); */
+}
+
+.icon-sakai-chat {
+/*	background-image : url(../../image/silk/user_comment.png); */
+}
+
+.icon-sakai-resources {
+/*	background-image : url(../../image/silk/folder.png); */
+}
+
+.icon-sakai-samigo {
+/*	background-image : url(../../image/silk/pencil.png); */
+}
+
+.icon-sakai-help {
+/*	background-image : url(../../image/silk/help.png); */
+}
+
+.icon-sakai-syllabus {
+/*	background-image : url(../../image/silk/new.png); */
+} 
+.icon-sakai-assignment-grades {
+/*	background-image : url(../../image/silk/new.png); */
+}
+.icon-sakai-gradebook-tool {
+/*	background-image : url(../../image/silk/new.png); */
+}
+.icon-sakai-sections {
+/*	background-image : url(../../image/silk/new.png); */
+}
+.icon-blogger {
+/*	background-image : url(../../image/silk/new.png); */
+}
+.icon-osp-evaluation {
+/*	background-image : url(../../image/silk/thumb_up.png); */
+}
+.icon-sakai-metaobj {
+/*	background-image : url(../../image/silk/application_form.png); */
+}
+.icon-sakai-forums {
+/*	background-image : url(../../image/silk/new.png); */
+}
+.icon-osp-glossary {
+/*	background-image : url(../../image/silk/text_list_bullets.png); */
+}
+.icon-sakai-rutgers-linktool {
+/*	background-image : url(../../image/silk/new.png); */
+}
+.icon-sakai-mailtool {
+/*	background-image : url(../../image/silk/new.png); */
+}
+.icon-osp-matrix {
+/*	background-image : url(../../image/silk/table.png); */
+}
+.icon-sakai-messages {
+/*	background-image : url(../../image/silk/new.png); */
+}
+.icon-sakai-podcasts {
+/*	background-image : url(../../image/silk/new.png); */
+}
+.icon-sakai-poll {
+/*	background-image : url(../../image/silk/chart_bar.png); */
+}
+.icon-sakai-resetpass {
+/*	background-image : url(../../image/silk/key.png); */
+}
+.icon-osp-presLayout {
+/*	background-image : url(../../image/silk/layout_content.png); */
+}
+.icon-osp-presTemplate {
+/*	background-image : url(../../image/silk/application_view_tile.png); */
+}
+.icon-osp-presentation {
+/*	background-image : url(../../image/silk/briefcase.png); */
+}
+.icon-sakai-postem {
+/*	background-image : url(../../image/silk/new.png); */
+}
+.icon-sakai-reports {
+/*	background-image : url(../../image/silk/report.png); */
+}
+.icon-osp-style {
+/*	background-image : url(../../image/silk/style.png); */
+}
+.icon-osp-wizard {
+/*	background-image : url(../../image/silk/wand.png); */
+}
+.icon-sakai-gmt {
+/*	background-image : url(../../image/silk/award_star_gold_3.png); */
+}	
+.icon-sakai-datapoint {
+/*	background-image : url(../../image/silk/chart_line.png); */
+}
+
+
+/** Privacy Popup Styles **/
+div#privacy_tool_popup {
+    position: absolute;
+    background: #fff;
+    color: #000;
+    border: 4px solid #0198CD;
+    width: 450px;
+    top: 20%;
+    left: 50%;
+    margin-left: -225px;
+    z-index: 1000;
+    padding: 5px 5px 5px 10px;
+}
+
+div#privacy_overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	filter:alpha(opacity=70);
+	-moz-opacity: 0.7;
+	opacity: 0.7;
+   z-index: 0;
+}
+
+#logiText{
+	font-size: 12px;
+	font-weight: normal;
+	margin-right: 10px;
+	margin-left: 12px;
+	color: #333;
+}
+
+#logiButton{
+	margin-right: 10px;
+	margin-left: 12px;
+}
+
+#logiTable{
+	margin-top: 10px;	
+}

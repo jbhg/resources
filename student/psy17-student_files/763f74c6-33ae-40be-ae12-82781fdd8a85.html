@@ -1,0 +1,453 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0087)https://trunk.tufts.edu/xsl-portal/tool/763f74c6-33ae-40be-ae12-82781fdd8a85?panel=Main -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<title>Resources</title>
+	<link href="tool_base.css" type="text/css" rel="stylesheet" media="all">
+	<link href="tool.css" type="text/css" rel="stylesheet" media="all">
+	<script type="text/javascript" language="JavaScript" src="headscripts.js"></script>
+
+
+	<!-- vm/editor/FCKeditor/sakai_header.vm -->
+	<script type="text/javascript" src="fckeditor.js"></script>
+
+</head>
+<body onload="setMainFrameHeight(&#39;Main763f74c6x33aex40bexae12x82781fdd8a85&#39;);setFocus(focus_path);" marginwidth="0" marginheight="0" class=" hasGoogleVoiceExt">
+
+<!-- sakai_resources_list.vm, use with org.sakaiproject.content.tool.ResourcesAction.java -->
+<!-- this is the new list template, which uses the resources type registry -->
+<!--[if gt IE 5.0]><![if lt IE 7]>
+<style type="text/css">
+/* that IE 5+ conditional comment makes this only visible in IE 5+*/ 
+ul.makeMenu ul {  /* copy of above declaration without the > selector */                                                                      
+display: none; position: absolute; top: 18px; left: 0px; background-image:none; background-color:#ffffff;width: 15em; z-index:3;border:1px solid  #666  	
+}
+ul.makeMenu ul li {display:block}
+
+
+</style>
+<![endif]><![endif]-->
+<!--[if gt IE 6.0]><![if lt IE 8]>
+<style type="text/css">
+ul.makeMenu li {
+padding:2px; 
+position: relative;
+display:inline;
+}
+.menuOpen{border:1px solid #ccc;padding:1px;	background:#eee }
+.menuOpen:hover{border:1px solid #aaa;background:#ddd }
+ul.makeMenu{height:1em;padding:0;margin:3px 0; !important;border:1px solid transparent}
+ul.makeMenu:hover{border:1px solid transparent !important;padding:0;margin:0}
+ul.makeMenu ul{top: 15px !important;left:0}
+.attach{width:1em !important;padding-bottom:.7em !important}
+
+</style>
+<![endif]><![endif]-->
+
+
+<script type="text/javascript" src="jquery.js">
+<!-- // -->
+</script>
+<script type="text/javascript">
+$(document).ready(function() {
+	jQuery('.portletBody').click(function(e) { 
+
+		if ( e.target.className !='menuOpen' &&e.target.className !='dropdn'  ){
+			$('.makeMenuChild').hide();
+		}
+		else
+		{
+			if( e.target.className =='dropdn' ){
+				targetId=$(e.target).parent('li').attr('id');
+				$('.makeMenuChild').hide();
+				$('#menu-' + targetId).show();
+
+			}
+			else{
+				targetId=e.target.id;
+				$('.makeMenuChild').hide();
+				$('#menu-' + targetId).show();
+				}}
+			});
+		});
+		</script>
+
+		<div class="portletBody specialLink">
+			<form name="showForm" id="showForm" action="763f74c6-33ae-40be-ae12-82781fdd8a85.html" method="post">
+				<input type="hidden" name="source" id="source" value="0">
+				<input type="hidden" name="collectionId" id="collectionId" value="/group/16f88300-d626-4e14-a687-fae5d5dd3017/COURSE_DEFAULT.CourseDocuments.CONTENT_LINK.label/Additional Readings/">
+				<input type="hidden" name="navRoot" id="navRoot" value="">
+				<input type="hidden" name="criteria" id="criteria" value="title">
+				<input type="hidden" name="sakai_action" id="sakai_action" value="">
+				<input type="hidden" name="rt_action" id="rt_action" value="">
+				<input type="hidden" name="selectedItemId" id="selectedItemId" value="">
+				<div class="breadCrumb specialLink">
+					<h3>
+						Location:
+						<img src="dir_closed.gif" border="0" alt="folder">
+						<a href="https://trunk.tufts.edu/xsl-portal/tool/763f74c6-33ae-40be-ae12-82781fdd8a85?panel=Main#" onclick="javascript:document.getElementById(&#39;sakai_action&#39;).value=&#39;doNavigate&#39;;document.getElementById(&#39;collectionId&#39;).value=&#39;/group/16f88300-d626-4e14-a687-fae5d5dd3017/&#39;;document.getElementById(&#39;navRoot&#39;).value=&#39;/group/16f88300-d626-4e14-a687-fae5d5dd3017/&#39;;document.getElementById(&#39;showForm&#39;).submit();" title="Go to this folder">
+							Sp12 - PSY-0017-01 - INDUST/ORGANIZ PSYCH Resources
+						</a> /
+						<a href="https://trunk.tufts.edu/xsl-portal/tool/763f74c6-33ae-40be-ae12-82781fdd8a85?panel=Main#" onclick="javascript:document.getElementById(&#39;sakai_action&#39;).value=&#39;doNavigate&#39;;document.getElementById(&#39;collectionId&#39;).value=&#39;/group/16f88300-d626-4e14-a687-fae5d5dd3017/COURSE_DEFAULT.CourseDocuments.CONTENT_LINK.label/&#39;;document.getElementById(&#39;navRoot&#39;).value=&#39;&#39;;document.getElementById(&#39;showForm&#39;).submit();" title="Go to this folder">
+							Course Documents
+						</a> /
+						Additional Readings
+						<a href="https://trunk.tufts.edu/xsl-portal/tool/763f74c6-33ae-40be-ae12-82781fdd8a85?panel=Main#" onclick="javascript:document.getElementById(&#39;sakai_action&#39;).value=&#39;doNavigate&#39;;document.getElementById(&#39;collectionId&#39;).value=&#39;/group/16f88300-d626-4e14-a687-fae5d5dd3017/COURSE_DEFAULT.CourseDocuments.CONTENT_LINK.label/&#39;;document.getElementById(&#39;navRoot&#39;).value=&#39;&#39;;document.getElementById(&#39;showForm&#39;).submit();" title="Up one level">
+							<img src="onelevelup.gif" border="0" alt="Up one level">
+						</a>
+					</h3>
+				</div>	
+				<div class="navPanel">
+					<!-- 
+					<div class="navIntraToolLink viewNav">
+						<span>
+							<input id="copy-button" type="button" value="Copy" onclick="javascript:document.getElementById(&#39;sakai_action&#39;).value=&#39;doMultiItemDispatch&#39;;document.getElementById(&#39;rt_action&#39;).value=&#39;copy&#39;;document.getElementById(&#39;showForm&#39;).submit();" disabled="disabled" alt="copy">
+
+						</span>
+					</div>
+					-->
+				</div>	
+
+				<table class="listHier lines centerLines" cellspacing="0" border="0" summary="Tabled list of resources, including folders and sub-folders, files, web-links, HTML pages and text files. Column 1 is not used. Column 2 has checkboxes to select whether an item should be moved, copied or removed. Column 3 has the link to open the resource or folder. Column 4 allows you to add new resources to a folder. Column 5 links to actions you can take on that resource. Column 6 states the group who can see that resource. Column 7 states the person who created that resource. Column 8 states the date the resource was last modified. Column 9 states the size of the resource">
+					<caption class="skip" style="display:none">List of resources</caption>
+					<tbody><tr>
+						<th id="expansion" style="border:none">
+							<a href="javascript:document.getElementById('sakai_action').value='doExpandall';document.getElementById('collectionId').value='/group/16f88300-d626-4e14-a687-fae5d5dd3017/COURSE_DEFAULT.CourseDocuments.CONTENT_LINK.label/Additional Readings/';document.getElementById('showForm').submit();" title="Expand All">
+								<img src="expand-collapse.gif" border="0" title="Expand All" alt="Expand All" hspace="0">
+							</a>								 
+						</th>
+						<th id="checkboxes" style="border:none">
+							<input type="checkbox" name="selectall" id="selectall" title="Check All" onclick="javascript:toggleSelectAll(this, &#39;selectedMembers&#39;)" value=""><label for="selectall" class="skip">Check All</label>
+						</th>
+						<th id="title" style="border:none">
+							<a href="javascript:document.getElementById('sakai_action').value='doSort';document.getElementById('collectionId').value='/group/16f88300-d626-4e14-a687-fae5d5dd3017/COURSE_DEFAULT.CourseDocuments.CONTENT_LINK.label/Additional Readings/';document.getElementById('criteria').value='title';document.getElementById('showForm').submit();" title="Sort by title">
+								Title
+								<img src="sortascending.gif" border="0" title="Sort by title ascending" alt="Sort by title ascending"> 
+							</a>
+						</th>
+						<th id="actions1" class="attach" style="border:none">
+						</th>
+						<th id="actions2" style="border:none">
+						</th>
+						<th id="actions3" style="border:none">
+						</th>
+						<th id="access" style="border:none">
+							Access
+						</th>
+						<th id="creator" style="border:none">
+							<a href="javascript:document.getElementById('sakai_action').value='doSort';document.getElementById('collectionId').value='/group/16f88300-d626-4e14-a687-fae5d5dd3017/COURSE_DEFAULT.CourseDocuments.CONTENT_LINK.label/Additional Readings/';document.getElementById('criteria').value='created by';document.getElementById('showForm').submit();" title="Sort by author">
+								Created By
+							</a>
+						</th>
+						<th id="modified" style="border:none">
+							<a href="javascript:document.getElementById('sakai_action').value='doSort';document.getElementById('collectionId').value='/group/16f88300-d626-4e14-a687-fae5d5dd3017/COURSE_DEFAULT.CourseDocuments.CONTENT_LINK.label/Additional Readings/';document.getElementById('criteria').value='last modified';document.getElementById('showForm').submit();" title="Sort by date last modified">
+								Modified
+							</a>
+						</th>
+						<th id="size" style="border:none">
+							<a href="javascript:document.getElementById('sakai_action').value='doSort';document.getElementById('collectionId').value='/group/16f88300-d626-4e14-a687-fae5d5dd3017/COURSE_DEFAULT.CourseDocuments.CONTENT_LINK.label/Additional Readings/';document.getElementById('criteria').value='size';document.getElementById('showForm').submit();" title="Sort by size">
+								Size
+							</a>
+						</th>
+					</tr>
+
+
+					<tr class="even">
+						<td headers="expansion">
+						</td>
+						<td headers="checkboxes">
+						</td>
+						<td headers="title" style="text-indent:0em" class="specialLink">
+							<h3> 
+								<span class="skip"></span><span class="nil">
+									<img src="dir_closed.gif" border="0" alt="Folder" hspace="0"></span>
+
+									<a href="https://trunk.tufts.edu/xsl-portal/tool/763f74c6-33ae-40be-ae12-82781fdd8a85?panel=Main#" onclick="javascript:document.getElementById(&#39;sakai_action&#39;).value=&#39;doNavigate&#39;;document.getElementById(&#39;collectionId&#39;).value=&#39;/group/16f88300-d626-4e14-a687-fae5d5dd3017/COURSE_DEFAULT.CourseDocuments.CONTENT_LINK.label/Additional Readings/&#39;;document.getElementById(&#39;navRoot&#39;).value=&#39;&#39;;document.getElementById(&#39;showForm&#39;).submit();" title="Folder">
+										Additional Readings
+									</a>
+								</h3>	
+							</td>
+							<td headers="actions1" style="white-space:nowrap;vertical-align:middle" class="attach">
+							</td>
+
+
+							<td headers="actions2" class="attach">
+
+
+							</td>
+							<td headers="actions3" class="attach">
+
+								<a href="https://trunk.tufts.edu/xsl-portal/tool/763f74c6-33ae-40be-ae12-82781fdd8a85?panel=Main#" onfocus="document.getElementById(&#39;menu-9998&#39;).style.display=&#39;none&#39;;" class="skip"></a>
+								<a href="https://trunk.tufts.edu/xsl-portal/tool/763f74c6-33ae-40be-ae12-82781fdd8a85?panel=Main#" onfocus="document.getElementById(&#39;menu-9998&#39;).style.display=&#39;block&#39;;" class="skip">Start Actions Menu</a>
+								<ul style="z-index:9998 ;margin:0;display:block" class="makeMenu">
+									<li class="menuOpen" id="9998">
+										&nbsp;Actions
+										<img src="icon-dropdn.gif" border="0" alt="Actions" class="dropdn">									
+										<ul id="menu-9998" class="makeMenuChild">
+											<li>
+												<a href="javascript:document.getElementById('selectedItemId').value='/group/16f88300-d626-4e14-a687-fae5d5dd3017/COURSE_DEFAULT.CourseDocuments.CONTENT_LINK.label/Additional Readings/';document.getElementById('rt_action').value='org.sakaiproject.content.types.folder:copy';document.getElementById('sakai_action').value='doDispatchAction';submitform('showForm');">
+													Copy
+												</a>
+											</li>
+											<li>
+												<a href="javascript:document.getElementById('selectedItemId').value='/group/16f88300-d626-4e14-a687-fae5d5dd3017/COURSE_DEFAULT.CourseDocuments.CONTENT_LINK.label/Additional Readings/';document.getElementById('rt_action').value='org.sakaiproject.content.types.folder:info';document.getElementById('sakai_action').value='doDispatchAction';submitform('showForm');">
+													View Details
+												</a>
+											</li>
+											<li style="height:1px;width:1px;display:inline;">
+												<a href="https://trunk.tufts.edu/xsl-portal/tool/763f74c6-33ae-40be-ae12-82781fdd8a85?panel=Main#" onfocus="document.getElementById(&#39;menu-9998&#39;).style.display=&#39;none&#39;;document.getElementById(&#39;last-9998&#39;).focus()" style="height:1px;margin:0;padding:0" class="skip">End Actions Menu</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+								<a href="https://trunk.tufts.edu/xsl-portal/tool/763f74c6-33ae-40be-ae12-82781fdd8a85?panel=Main#" id="last-9998" class="skip"></a>		
+
+							</td>
+							<td colspan="4">
+							</td>
+						</tr>
+						<tr class="odd">
+							<td headers="expansion">
+							</td>
+							<td headers="checkboxes">
+								<input type="checkbox" name="selectedMembers" id="list2" onclick="adjustCount(this, &#39;copy&#39;);" value="/group/16f88300-d626-4e14-a687-fae5d5dd3017/COURSE_DEFAULT.CourseDocuments.CONTENT_LINK.label/Additional Readings/CaseMissingTime-1.pdf"><label for="list2" class="skip">Select</label>
+							</td>
+							<td headers="title" style="text-indent:1em" class="specialLink">
+								<h4> 
+									<a href="https://trunk.tufts.edu/access/content/group/16f88300-d626-4e14-a687-fae5d5dd3017/COURSE_DEFAULT.CourseDocuments.CONTENT_LINK.label/Additional%20Readings/CaseMissingTime-1.pdf" target="_blank">
+										<img src="pdf.gif" border="0" alt="PDF" hspace="0">
+									</a>
+									<a href="https://trunk.tufts.edu/access/content/group/16f88300-d626-4e14-a687-fae5d5dd3017/COURSE_DEFAULT.CourseDocuments.CONTENT_LINK.label/Additional%20Readings/CaseMissingTime-1.pdf" target="_blank" title="PDF">
+										CaseMissingTime.pdf (11)
+									</a>
+								</h4>	
+							</td>
+							<td headers="actions1" style="white-space:nowrap;vertical-align:middle" class="attach">
+							</td>
+
+
+							<td headers="actions2" class="attach">
+
+
+							</td>
+							<td headers="actions3" class="attach">
+
+								<a href="https://trunk.tufts.edu/xsl-portal/tool/763f74c6-33ae-40be-ae12-82781fdd8a85?panel=Main#" onfocus="document.getElementById(&#39;menu-9996&#39;).style.display=&#39;none&#39;;" class="skip"></a>
+								<a href="https://trunk.tufts.edu/xsl-portal/tool/763f74c6-33ae-40be-ae12-82781fdd8a85?panel=Main#" onfocus="document.getElementById(&#39;menu-9996&#39;).style.display=&#39;block&#39;;" class="skip">Start Actions Menu</a>
+								<ul style="z-index:9996 ;margin:0;display:block" class="makeMenu">
+									<li class="menuOpen" id="9996">
+										&nbsp;Actions
+										<img src="icon-dropdn.gif" border="0" alt="Actions" class="dropdn">									
+										<ul id="menu-9996" class="makeMenuChild">
+											<li>
+												<a href="javascript:document.getElementById('selectedItemId').value='/group/16f88300-d626-4e14-a687-fae5d5dd3017/COURSE_DEFAULT.CourseDocuments.CONTENT_LINK.label/Additional Readings/CaseMissingTime-1.pdf';document.getElementById('rt_action').value='org.sakaiproject.content.types.fileUpload:copy';document.getElementById('sakai_action').value='doDispatchAction';submitform('showForm');">
+													Copy
+												</a>
+											</li>
+											<li>
+												<a href="javascript:document.getElementById('selectedItemId').value='/group/16f88300-d626-4e14-a687-fae5d5dd3017/COURSE_DEFAULT.CourseDocuments.CONTENT_LINK.label/Additional Readings/CaseMissingTime-1.pdf';document.getElementById('rt_action').value='org.sakaiproject.content.types.fileUpload:info';document.getElementById('sakai_action').value='doDispatchAction';submitform('showForm');">
+													View Details
+												</a>
+											</li>
+											<li style="height:1px;width:1px;display:inline;">
+												<a href="https://trunk.tufts.edu/xsl-portal/tool/763f74c6-33ae-40be-ae12-82781fdd8a85?panel=Main#" onfocus="document.getElementById(&#39;menu-9996&#39;).style.display=&#39;none&#39;;document.getElementById(&#39;last-9996&#39;).focus()" style="height:1px;margin:0;padding:0" class="skip">End Actions Menu</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+								<a href="https://trunk.tufts.edu/xsl-portal/tool/763f74c6-33ae-40be-ae12-82781fdd8a85?panel=Main#" id="last-9996" class="skip"></a>		
+
+							</td>
+							<td headers="access" title="Visible to entire site">
+								Entire site
+							</td>
+							<td headers="creator">
+								Trunk !!!!!! 2
+							</td>
+							<td headers="modified">
+								May 25, 2011 12:02 pm
+							</td>
+							<td headers="size">
+								356.7 KB 
+							</td>
+						</tr>
+						<tr class="even">
+							<td headers="expansion">
+							</td>
+							<td headers="checkboxes">
+								<input type="checkbox" name="selectedMembers" id="list3" onclick="adjustCount(this, &#39;copy&#39;);" value="/group/16f88300-d626-4e14-a687-fae5d5dd3017/COURSE_DEFAULT.CourseDocuments.CONTENT_LINK.label/Additional Readings/Case - Container Fire.doc"><label for="list3" class="skip">Select</label>
+							</td>
+							<td headers="title" style="text-indent:1em" class="specialLink">
+								<h4> 
+									<a href="https://trunk.tufts.edu/access/content/group/16f88300-d626-4e14-a687-fae5d5dd3017/COURSE_DEFAULT.CourseDocuments.CONTENT_LINK.label/Additional%20Readings/Case%20-%20Container%20Fire.doc" target="_self">
+										<img src="word.gif" border="0" alt="Word" hspace="0">
+									</a>
+									<a href="https://trunk.tufts.edu/access/content/group/16f88300-d626-4e14-a687-fae5d5dd3017/COURSE_DEFAULT.CourseDocuments.CONTENT_LINK.label/Additional%20Readings/Case%20-%20Container%20Fire.doc" target="_self" title="Word">
+										Case - Container Fire.doc
+									</a>
+								</h4>	
+							</td>
+							<td headers="actions1" style="white-space:nowrap;vertical-align:middle" class="attach">
+							</td>
+
+
+							<td headers="actions2" class="attach">
+
+
+							</td>
+							<td headers="actions3" class="attach">
+
+								<a href="https://trunk.tufts.edu/xsl-portal/tool/763f74c6-33ae-40be-ae12-82781fdd8a85?panel=Main#" onfocus="document.getElementById(&#39;menu-9994&#39;).style.display=&#39;none&#39;;" class="skip"></a>
+								<a href="https://trunk.tufts.edu/xsl-portal/tool/763f74c6-33ae-40be-ae12-82781fdd8a85?panel=Main#" onfocus="document.getElementById(&#39;menu-9994&#39;).style.display=&#39;block&#39;;" class="skip">Start Actions Menu</a>
+								<ul style="z-index:9994 ;margin:0;display:block" class="makeMenu">
+									<li class="menuOpen" id="9994">
+										&nbsp;Actions
+										<img src="icon-dropdn.gif" border="0" alt="Actions" class="dropdn">									
+										<ul id="menu-9994" class="makeMenuChild">
+											<li>
+												<a href="javascript:document.getElementById('selectedItemId').value='/group/16f88300-d626-4e14-a687-fae5d5dd3017/COURSE_DEFAULT.CourseDocuments.CONTENT_LINK.label/Additional Readings/Case - Container Fire.doc';document.getElementById('rt_action').value='org.sakaiproject.content.types.fileUpload:copy';document.getElementById('sakai_action').value='doDispatchAction';submitform('showForm');">
+													Copy
+												</a>
+											</li>
+											<li>
+												<a href="javascript:document.getElementById('selectedItemId').value='/group/16f88300-d626-4e14-a687-fae5d5dd3017/COURSE_DEFAULT.CourseDocuments.CONTENT_LINK.label/Additional Readings/Case - Container Fire.doc';document.getElementById('rt_action').value='org.sakaiproject.content.types.fileUpload:info';document.getElementById('sakai_action').value='doDispatchAction';submitform('showForm');">
+													View Details
+												</a>
+											</li>
+											<li style="height:1px;width:1px;display:inline;">
+												<a href="https://trunk.tufts.edu/xsl-portal/tool/763f74c6-33ae-40be-ae12-82781fdd8a85?panel=Main#" onfocus="document.getElementById(&#39;menu-9994&#39;).style.display=&#39;none&#39;;document.getElementById(&#39;last-9994&#39;).focus()" style="height:1px;margin:0;padding:0" class="skip">End Actions Menu</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+								<a href="https://trunk.tufts.edu/xsl-portal/tool/763f74c6-33ae-40be-ae12-82781fdd8a85?panel=Main#" id="last-9994" class="skip"></a>		
+
+							</td>
+							<td headers="access" title="Visible to entire site">
+								Entire site
+							</td>
+							<td headers="creator">
+								Trunk Support 2
+							</td>
+							<td headers="modified">
+								May 25, 2011 12:02 pm
+							</td>
+							<td headers="size">
+								32.5 KB 
+							</td>
+						</tr>
+					</tbody></table>
+					<div id="bottompadding" style="height:12em"> </div> 
+
+					<input type="hidden" id="copy-count" value="0">
+				</form>						
+			</div>
+			<script language="JavaScript" type="text/JavaScript">
+			<!--
+			document.getElementById("selectall").disabled = false;
+			function openCopyrightWindow(theURL,winName,winSettings) 
+			{ 
+				window.open(theURL,winName,winSettings);
+				return false;
+			}
+			function toggleSelectAll(caller, elementName)
+			{
+				var newValue = caller.checked;
+				var elements = document.getElementsByName(elementName);
+
+				if(elements)
+				{
+					for(var i = 0; i < elements.length; i++)
+					{
+						elements[i].checked = newValue;
+					}
+				}
+
+				if(newValue == true)
+				{
+					caller.title = "Uncheck All";
+					var copy_button = document.getElementById("copy-button");
+					if(copy_button)
+					{
+						copy_button.disabled = false;
+						copy_button.className = 'enabled';
+					}
+					document.getElementById("copy-count").value = "34";
+				}
+				else
+				{
+					caller.title = "Check All";
+					var copy_button = document.getElementById("copy-button");
+					if(copy_button)
+					{
+						copy_button.disabled = true;
+						copy_button.className = 'disabled';
+					}
+					document.getElementById("copy-count").value = "0";
+				}
+			}
+
+			function adjustCount(caller, key)
+			{
+				var counter = document.getElementById(key + "-count");
+				var button = document.getElementById(key + "-button");
+
+				if(caller && caller.checked && caller.checked == true)
+				{
+					counter.value = parseInt(counter.value) + 1;
+				}
+				else
+				{
+					counter.value = parseInt(counter.value) - 1;
+				}
+
+				if(button)
+				{
+					if(counter.value > 0)
+					{
+						button.disabled = false;
+						button.className='enabled';
+					}
+					else
+					{
+						button.disabled = true;
+						button.className='disabled';
+					}
+				}
+			}
+
+			function disableLinks()
+			{
+				if(document.getElementsByName)
+				{
+					var enabledLinks = document.getElementsByName("enabledActionLinks");
+					var disabledLinks = document.getElementsByName("disabledActionLinks");
+					if(enabledLinks)
+					{
+						for(var i = 0; i < enabledLinks.length; i++)
+						{
+							//enabledLinks[i].innerHTML = disabledLinks[i].innerHTML;
+							enabledLinks[i].style.display="none";
+							disabledLinks[i].style.display="block";
+						}
+					}			
+				}
+			}
+			function submitform(id)
+			{
+				var theForm = document.getElementById(id);
+				if(theForm && theForm.onsubmit)
+				{
+					theForm.onsubmit();
+				}
+				if(theForm && theForm.submit)
+				{
+					theForm.submit();
+				}
+			}
+			//-->
+			</script>
+
+
+		</body></html>
