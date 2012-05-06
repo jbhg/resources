@@ -900,8 +900,8 @@ font: bold 1.6em Arial, Helvetica, sans-serif;
 /*PART 7 - PORTLETS - children of #content*/
 /*a page may display portlets in one column or two columns - the next three id selectors address the three possiblities - sole child of column is the .portlet */
 #col1{
-	float:left;
 	padding-right: .0em;
+	float:left;
 }
 
 #col1of2{
