@@ -479,6 +479,10 @@ tr td.arrowHere{
 	width: 14px
 }
 
+/* 
+I don't want to deal with Trunk's odd/even labeling…especially if I make a manual change.
+I also don't know that Trunk as-is uses even/odd labels for anything of use.
+ */
 tr:nth-child(2n){
 	background-color: #EFEFEF;
 }
