@@ -901,6 +901,7 @@ font: bold 1.6em Arial, Helvetica, sans-serif;
 /*a page may display portlets in one column or two columns - the next three id selectors address the three possiblities - sole child of column is the .portlet */
 #col1{
 	float:left;
+	width: 95%;
 	padding-right: .0em;
 }
 
@@ -927,6 +928,7 @@ font: bold 1.6em Arial, Helvetica, sans-serif;
 /*.portletTitleWrap are wrappers for the tool title documents,
 below they are contextually defined depending on the column as an example,as you may want to adjust the widths accordingly*/ 
 #col1 .portletTitleWrap{
+	display: none;
 	width: 97.5%;
 	*/width: 96.0%;
 }

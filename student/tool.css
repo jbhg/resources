@@ -479,6 +479,10 @@ tr td.arrowHere{
 	width: 14px
 }
 
+tr:nth-child(2n){
+	background-color: #EFEFEF;
+}
+
 tr#selectedReorder td.arrowHere{
 /*	can give this an image if needed*/
 /*	background: url(images/arrowhere.gif) center .5em no-repeat*/
@@ -731,6 +735,7 @@ visibility gets toggled*/
 /*positioning etc., are defined in base - here just the skin info*/
 /*see any list with more than 20 items - announcements - for example*/
 .navPanel{
+	display: none;
 	background-color:#EFEDE6
 }
 /*the default action in this control - keep in mind that anything you do to it (except to the font) will make 
@@ -899,6 +904,11 @@ table.hierItemBlock td h4,table.hierItemBlock td h5,table.hierItemBlock td h6,
 tr.selectedFound td{
 
 }
+
+td#creatorheader, th#creator, td#accessheader, th#access{
+	display: none;
+}
+
 
 
 .rosterImage{
